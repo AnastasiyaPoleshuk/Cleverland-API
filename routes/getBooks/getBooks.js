@@ -1,26 +1,27 @@
 const StatusCodes = require("http-status-codes");
-const categories = require("../../utils/categories.json");
+const books = require("../../utils/books.json");
 const checkToken = require("../../utils/checkToken.js");
 
-const getCategories = (req, res) => {
+const getBooks = (req, res) => {
   if (!req) {
     return {
       status: StatusCodes.StatusCodes.NOT_FOUND,
       responseData: "token is not found",
     };
   }
+
   const isCorrectToken = checkToken(req);
-  const responseData = getCategoriesData(isCorrectToken);
+  const responseData = getBooksData(isCorrectToken);
   return {
     status: responseData.status,
     responseData: responseData.responseData,
   };
 };
 
-function getCategoriesData(isCorrectToken) {
+function getBooksData(isCorrectToken) {
   const resp = {
     status: StatusCodes.StatusCodes.OK,
-    responseData: categories,
+    responseData: books,
   };
 
   if (!isCorrectToken) {
@@ -32,4 +33,4 @@ function getCategoriesData(isCorrectToken) {
   return resp;
 }
 
-module.exports = getCategories;
+module.exports = getBooks;
