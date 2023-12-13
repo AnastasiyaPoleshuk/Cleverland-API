@@ -1,9 +1,14 @@
 const getHealthStatus = require("../routes/healthcheck/healthcheck");
 const loginUser = require("../routes/loginUser/loginUser");
+const getCategories = require("../routes/getCategories/getCategories");
 
 const router = (app) => {
   app.get("/healthcheck", (request, response) => {
     const responseData = getHealthStatus();
+    response.send(responseData);
+  });
+  app.get("/categories", (request, response) => {
+    const responseData = getCategories(request.headers.authorization, response);
     response.send(responseData);
   });
   app.get("/", (request, response) => {

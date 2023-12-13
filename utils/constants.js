@@ -4,6 +4,7 @@ const CONSTANTS = {
     Application: "Cleverland API",
     Status: "Healthy",
   },
+  PORT: 5000,
   MOCK_USER: {
     id: 0,
     username: "Lit",
