@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Бизнес",
+    "path": "business",
+    "id": 1,
+    "booksCount": 63
+  },
+  {
+    "name": "Психология",
+    "path": "psychology",
+    "id": 2,
+    "booksCount": 20
+  },
+  {
+    "name": "Родителям",
+    "path": "parents",
+    "id": 3,
+    "booksCount": 9
+  },
+  {
+    "name": "Нон-фикшн",
+    "path": "non-fiction",
+    "id": 4,
+    "booksCount": 7
+  },
+  {
+    "name": "Художественная литература",
+    "path": "fiction",
+    "id": 5,
+    "booksCount": 29
+  },
+  {
+    "name": "Программирование",
+    "path": "programming",
+    "id": 6,
+    "booksCount": 4
+  },
+  {
+    "name": "Хобби",
+    "path": "hobby",
+    "id": 7,
+    "booksCount": 1
+  },
+  {
+    "name": "Дизайн",
+    "path": "design",
+    "id": 8,
+    "booksCount": 3
+  },
+  {
+    "name": "Детские",
+    "path": "childish",
+    "id": 9,
+    "booksCount": 4
+  },
+  {
+    "name": "Другое",
+    "path": "other",
+    "id": 10,
+    "booksCount": 0
+  }
+]

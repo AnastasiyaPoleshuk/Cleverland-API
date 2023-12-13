@@ -2,7 +2,7 @@ const StatusCodes = require("http-status-codes");
 const constants = require("../../utils/constants");
 
 const loginUser = (req, res) => {
-  if (!req.body) return res.sendStatus(400);
+  if (!req.body) return res.sendStatus(StatusCodes.StatusCodes.BAD_REQUEST);
 
   const identifier = req.body.identifier;
   const userPassword = req.body.password;
