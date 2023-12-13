@@ -8,18 +8,18 @@ const router = (app) => {
     const responseData = getHealthStatus();
     response.send(responseData);
   });
-  app.get("/categories", (request, response) => {
+  app.get("/api/categories", (request, response) => {
     const responseData = getCategories(request.headers.authorization, response);
     response.send(responseData);
   });
-  app.get("/books", (request, response) => {
+  app.get("/api/books", (request, response) => {
     const responseData = getBooks(request.headers.authorization, response);
     response.send(responseData);
   });
   app.get("/", (request, response) => {
     response.send("Cleverland API");
   });
-  app.post("/login", (request, response) => {
+  app.post("/api/auth/local", (request, response) => {
     const responseData = loginUser(request, response);
     response.send(responseData);
   });

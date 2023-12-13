@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const router = require("./router/router");
 const constants = require("./utils/constants");
+const cors = require("cors");
 
 const app = express();
 
@@ -11,6 +12,8 @@ app.use(
     extended: true,
   })
 );
+
+app.use(cors());
 
 router(app);
 
