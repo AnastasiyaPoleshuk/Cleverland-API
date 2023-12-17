@@ -10,14 +10,11 @@ const getCategories = (req, res) => {
     };
   }
   const isCorrectToken = checkToken(req);
-  const responseData = getCategoriesData(isCorrectToken);
-  return {
-    status: responseData.status,
-    responseData: responseData.responseData,
-  };
+  const responseData = getCategoriesData(isCorrectToken, categories);
+  res.status(responseData.status).send(responseData.responseData);
 };
 
-function getCategoriesData(isCorrectToken) {
+function getCategoriesData(isCorrectToken, categories) {
   const resp = {
     status: StatusCodes.StatusCodes.OK,
     responseData: categories,

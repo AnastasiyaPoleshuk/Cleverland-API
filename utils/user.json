@@ -1,0 +1,26 @@
+{
+  "id": 0,
+  "username": "Lit",
+  "email": "lit@mail.com",
+  "confirmed": true,
+  "blocked": false,
+  "createdAt": "now",
+  "updatedAt": "never",
+  "firstName": "Alise",
+  "lastName": "",
+  "phone": "+3755555555",
+  "role": {
+    "id": 0,
+    "name": "",
+    "description": "",
+    "type": ""
+  },
+  "comments": [],
+  "avatar": "",
+  "booking": {},
+  "delivery": {},
+  "history": {
+    "id": 0,
+    "books": []
+  }
+}
