@@ -1,8 +1,8 @@
 const StatusCodes = require("http-status-codes");
-const books = require("../../utils/books.json");
+const user = require("../../utils/user.json");
 const checkToken = require("../../utils/checkToken.js");
 
-const getBooks = (req, res) => {
+const getUser = (req, res) => {
   if (!req) {
     return {
       status: StatusCodes.StatusCodes.NOT_FOUND,
@@ -11,14 +11,14 @@ const getBooks = (req, res) => {
   }
 
   const isCorrectToken = checkToken(req);
-  const responseData = getBooksData(isCorrectToken, books);
+  const responseData = getUserData(isCorrectToken, user);
   res.status(responseData.status).send(responseData.responseData);
 };
 
-function getBooksData(isCorrectToken, books) {
+function getUserData(isCorrectToken, user) {
   const resp = {
     status: StatusCodes.StatusCodes.OK,
-    responseData: books,
+    responseData: user,
   };
 
   if (!isCorrectToken) {
@@ -30,4 +30,4 @@ function getBooksData(isCorrectToken, books) {
   return resp;
 }
 
-module.exports = getBooks;
+module.exports = getUser;
